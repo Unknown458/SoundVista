@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    
+}
+main{
+    width: 100%;
+    min-height : calc(100vh + 60px - 50px);
+    
+   
+}
+footer{
+    width: 100%;
+    height: 440px;
+    background-color: #232732;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes header{
+0% { opacity: 0; top: -10%;}
+50% { opacity: 0.3;}
+100% { opacity: 1; top: 0%;}
+}
+
+.navbar{
+    animation-name: header;
+    animation-fill-mode: forwards;
+   animation-duration: 1s;
+   animation-timing-function: ease-out;
+}
+
+@keyframes con{
+    0% { opacity: 0; left: -12%; }
+    50% { opacity: 0.5; }
+    100%{opacity: 1; left: 0%; 
+        }
+}
+
+.content{
+    animation-name: con;
+animation-duration: 0.9s;
+animation-delay: 1s;
+/* animation-fill-mode: forwards; */
+animation-fill-mode: backwards;
+animation-timing-function: ease-out;
+}
+
+@keyframes noice{
+    0%{opacity: 0;  right: -0.1%;}
+    50%{opacity: 0.7;}
+       100%{opacity: 1; }
+}
+
+.noice{
+    animation-name: noice;
+    animation-duration: 0.7s;
+    animation-delay: 1.9s;
+    animation-fill-mode: backwards;
+animation-timing-function: ease-out;
+}
+
+.buttondown{
+    animation-name: noice;
+    animation-duration: 0.7s;
+    animation-delay: 2.9s;
+    animation-fill-mode: backwards;
+animation-timing-function: ease-out;
+
+}
+
+/* @keyframes putdown{
+0%{
+rotate: 0deg;
+}
+100%{
+    opacity: -700deg;
+}
+}
+.bigggmic{
+    animation-name: putdown;
+    
+    animation-timeline: scroll();
+   
+   
+    animation-timing-function: ease-out;
+} */
+
+
+
+.vid {
+    
+    display: none !important;
+    
+  }
+
+
+
+
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ position: fixed;
+  height: 100dvh;
+  width: 100%;
+  background-color: #232732;
+  z-index: 999;
+
+
+  }
+  .block{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  }
+  .side{
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+
+  .bar {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
+  }
+  
+  .bar:nth-child(2) {
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: .25s;
+  }
+  
+  .bar:nth-child(3) {
+    animation-delay: .5s;
+  }
+  
+  @keyframes scale-up4 {
+    20% {
+      background-color: #ffff;
+      transform: scaleY(1.5);
+    }
+  
+    40% {
+      transform: scaleY(1);
+    }
+  }
